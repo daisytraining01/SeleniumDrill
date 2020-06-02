@@ -32,9 +32,10 @@ public class SampleTestLogin {
 			userName = result.getString("Username");
 			password = result.getString("Password");
 		}
-		locator.username.sendKeys(userName);
-		locator.password.sendKeys(password);
-		locator.signIn.click();
+		SeleniumDriver.inputValuesInElement(locator.username, userName);
+		SeleniumDriver.inputValuesInElement(locator.password, password);
+		SeleniumDriver.clickOnTheElement(locator.signIn);
+
 		util.closeDBConnection();
 	}
 
