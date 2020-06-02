@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 
 import com.ether.base.SeleniumDriver;
 import com.ether.base.TestUtil;
-import com.ether.pages.actions.LoginAction;
+import com.ether.pages.locators.HomePageLocators;
 import com.ether.pages.locators.LoginPageLocators;
 
 //import com.ether.pages.locators.loginPageLocators;
@@ -14,6 +14,7 @@ import cucumber.api.java.en.Given;
 public class SampleTestLogin {
 	TestUtil util = new TestUtil();
 	LoginPageLocators locator = new LoginPageLocators();
+	HomePageLocators homepage = new HomePageLocators();
 
 	@Given("^Launch url$")
 	public void loginToUrl() {
@@ -32,10 +33,15 @@ public class SampleTestLogin {
 			userName = result.getString("Username");
 			password = result.getString("Password");
 		}
-		locator.username.sendKeys(userName);
-		locator.password.sendKeys(password);
-		locator.signIn.click();
+		SeleniumDriver.inputValuesInElement(locator.username, userName);
+		SeleniumDriver.inputValuesInElement(locator.password, password);
+		//locator.username.sendKeys(userName);
+		//locator.password.sendKeys(password);
+		SeleniumDriver.clickOnTheElement(locator.signIn);
+		//locator.signIn.click();
 		util.closeDBConnection();
+		
+		SeleniumDriver.clickOnTheElement(homepage.deposit);
 	}
 
 }

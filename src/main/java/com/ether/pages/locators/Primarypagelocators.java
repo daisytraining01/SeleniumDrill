@@ -35,7 +35,7 @@ public class Primarypagelocators {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"example\"]/thead/tr/th[4]")
 	public WebElement Status;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"example\"]/thead/tr/th[5")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"example\"]/thead/tr/th[5]")
 	public WebElement Amount;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"example\"]/thead/tr/th[6]")

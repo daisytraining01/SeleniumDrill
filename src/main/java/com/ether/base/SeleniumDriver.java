@@ -32,7 +32,7 @@ public class SeleniumDriver {
     public final static int PAGE_LOAD_TIMEOUT = 50;
 
     private  SeleniumDriver() {
-    	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\resources\\drivers\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\resources\\driver\\chromedriver.exe");
     	driver = new ChromeDriver();
         driver.manage().window().maximize();
 
