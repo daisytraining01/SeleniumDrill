@@ -1,6 +1,6 @@
 Feature:Logout to bank URL
 
- @logout
+ @logout @Priya
   Scenario: logout
     Given Launch url
     And login with userName and password

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.ether.base.SeleniumDriver;
 
 public class LoginPageLocators {
-	@FindBy(how = How.XPATH, using = "//input[@id='username']")
+	@FindBy(how = How.XPATH, using = "//input[@id='username']")         
 	public WebElement username;
 
 	@FindBy(how = How.XPATH, using = "//input[@id='password']")

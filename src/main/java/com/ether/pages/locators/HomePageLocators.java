@@ -41,11 +41,11 @@ public class HomePageLocators {
 	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Profile')]")
 	public WebElement userProfile;
 
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Logout')]")
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Logout')]")      
 	public WebElement logout;
 
 	// div[@class='panel
-	// panel-info']//span[@class='pull-left'][contains(text(),'View Details')]
+	// panel-info']//span[@class='pull-left'][contains(text(),'View Details')]       
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Go to Deposit')]")
 	public WebElement deposit;
 
